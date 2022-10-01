@@ -1,3 +1,11 @@
+# NOTHING IMPLEMENTED YET FOR N1MM+! COME BACK IN A FEW MONTHS!
+This is currently just the stock BarRaider template for Stream Deck plug-ins.  I have yet to implement the N1MM+ UDP listener, or any parsing/sending of events, or anything at all.
+
+I plan to implement an Elgato Stream Deck plug-in that automatically retrieves the N1MM+ Bandmap macro buttons, presents them on the Stream Deck, and sends events directly to the N1MM+ window regardless of what application is in use.  I would like to represent current toggle state as well.  I'll need to get new features from N1MM+ team to realize this effort, but in the meantime I'll work on just parsing the N1MM+ Bandmap button export file format to create the button layouts.
+
+N1MM+ Bandmap button documentation and sample usage:
+https://n1mmwp.hamdocs.com/manual-windows/bandmap-window/?hilite=band+map+buttons
+
 # BarRaider's Stream Deck Tools
 
 #### C# library that wraps all the communication with the Stream Deck App, allowing you to focus on actually writing the Plugin's logic.
