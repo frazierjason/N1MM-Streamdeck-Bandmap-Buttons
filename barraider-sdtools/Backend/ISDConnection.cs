@@ -49,6 +49,10 @@ namespace BarRaider.SdTools
         /// Event received when the Property Inspector for an instance is removed from the Stream Deck software user interface, for example when selecting a different instance.
         /// </summary>
         event EventHandler<SDEventReceivedEventArgs<PropertyInspectorDidDisappear>> OnPropertyInspectorDidDisappear;
+        /// <summary>
+        /// Event received when the computer wakes up
+        /// </summary>
+        event EventHandler<SDEventReceivedEventArgs<SystemDidWakeUp>> OnSystemDidWakeUp;
 
         #endregion
 
@@ -181,6 +185,25 @@ namespace BarRaider.SdTools
         /// <returns></returns>
         Task SetStateAsync(uint state);
 
+        /// <summary>
+        /// Sets the values of touchpad layouts items
+        /// </summary>
+        /// <param name="dictKeyValue">Dictionary holding the layout item keys and values you want to change</param>
+        /// <returns></returns>
+        Task SetFeedbackAsync(Dictionary<string, string> dictKeyValue);
+
+        /// <summary>
+        /// Sets the value of a single touchpad layout item
+        /// </summary>
+        /// <returns></returns>
+        Task SetFeedbackAsync(string layoutItemKey, string value);
+
+        /// <summary>
+        /// Changes the current Stream Deck+ touch display layout
+        /// </summary>
+        /// <returns></returns>
+        Task SetFeedbackLayoutAsync(string layout);
+
         #endregion
 
         /// <summary>
@@ -199,6 +222,6 @@ namespace BarRaider.SdTools
         /// StreamDeckConnection object, initialized based on the args received when launching the program
         /// </summary>
         [JsonIgnore]
-        streamdeck_client_csharp.StreamDeckConnection StreamDeckConnection { get; }
+        Communication.StreamDeckConnection StreamDeckConnection { get; }
     }
 }

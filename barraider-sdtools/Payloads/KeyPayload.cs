@@ -9,19 +9,19 @@ namespace BarRaider.SdTools
     public class KeyPayload
     {
         /// <summary>
-        /// Current plugin settings
+        /// Current event settings
         /// </summary>
         [JsonProperty("settings")]
         public JObject Settings { get; private set; }
 
         /// <summary>
-        /// Location of plugin on the stream deck
+        /// Coordinates of key on the stream deck
         /// </summary>
         [JsonProperty("coordinates")]
         public KeyCoordinates Coordinates { get; private set; }
 
         /// <summary>
-        /// Current plugin state
+        /// Current key state
         /// </summary>
         [JsonProperty("state")]
         public uint State { get; private set; }
@@ -54,5 +54,10 @@ namespace BarRaider.SdTools
             UserDesiredState = userDesiredState;
             IsInMultiAction = isInMultiAction;
         }
+
+        /// <summary>
+        /// For Seralization
+        /// </summary>
+        public KeyPayload() { }
     }
 }
