@@ -1,5 +1,11 @@
 # NOTHING IMPLEMENTED YET FOR N1MM+! COME BACK IN A FEW MONTHS!
-This is currently just the stock BarRaider template for Stream Deck plug-ins.  I have yet to implement the N1MM+ UDP listener, or any parsing/sending of events, or anything at all.
+
+Please see my recently released N1mmCommands-TouchPortal plugin, which is implemented and ready to go.  After it builds enough user base to consume it, provide 
+feedback, and flush out bugs and design issues, I will port the logic over to Stream Deck.
+
+https://github.com/frazierjason/N1mmCommands-TouchPortal
+
+For Stream Deck, this here repo is pretty empty.  It currently just contains the stock BarRaider template for Stream Deck plug-ins.  I have yet to implement the N1MM+ UDP listener, or any parsing/sending of events, or anything at all.
 
 I plan to implement an Elgato Stream Deck plug-in that automatically retrieves the N1MM+ Bandmap macro buttons, presents them on the Stream Deck, and sends events directly to the N1MM+ window regardless of what application is in use.  I would like to represent current toggle state as well.  I'll need to get new features from N1MM+ team to realize this effort, but in the meantime I'll work on just parsing the N1MM+ Bandmap button export file format to create the button layouts.
 
